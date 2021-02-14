@@ -60,7 +60,7 @@ class CSV2RDF:
                 self.data.add((resource_uri, RDF.type, instance_class))
                 self.schema.add((property_uri, RDF.type, RDF.Property))
 
-                value = self.table.ix[index][column]
+                value = self.table.loc[index][column]
 
                 if value:
                     self.data.add((resource_uri, property_uri, Literal(value)))
